@@ -1,4 +1,32 @@
+@using PierresTreats.Models;
+
 <h1>Welcome to Pierre's Treats!</h1>
+
+<h1>Flavors for @User.Identity.Name</h1>
+@if (((List<PierresTreats.Models.Flavor>)ViewData["userFlavors"]).Count == 0)
+{
+  <p>There are no flavors added yet!</p>
+}
+else
+{
+  @foreach (Flavor flavor in (List<PierresTreats.Models.Flavor>)ViewData["userFlavors"])
+  {
+    <li>@Html.ActionLink($"{flavor.Name}", "Details", "Flavors", new { id = flavor.FlavorId })</li>
+  }
+}
+
+<h1>Treats for @User.Identity.Name</h1>
+@if (((List<PierresTreats.Models.Treat>)ViewData["userTreats"]).Count == 0)
+{
+  <p>There are no treats added yet!</p>
+}
+else
+{
+  @foreach (Treat treat in (List<PierresTreats.Models.Treat>)ViewData["userTreats"])
+  {
+    <li>@Html.ActionLink($"{treat.Name}", "Details", "Treats", new { id = treat.TreatId })</li>
+  }
+}
 
 <p>@Html.ActionLink("See all flavors", "Index", "Flavors")</p>
 <p>@Html.ActionLink("See all treats", "Index", "Treats")</p>
