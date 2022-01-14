@@ -1,6 +1,6 @@
 # _Pierre's Treats_
 
-#### _Practice assignment to get experience using ASP.NET Core MVC, Databases, and many-to-many relationships to help a factory owner track their engineers and machines._
+#### _Practice assignment to get experience using ASP.NET Core MVC, Databases, many-to-many relationships, and Authentication with Identity to help a bakery owner track their treats and flavors._
 
 #### By _**Curtis Brooks**_
 
@@ -9,7 +9,6 @@
 * _C#_
 * _.NET 5_
 * _ASP.NET Core MVC_
-* _dotnet script, REPL_
 * _Razor View Engine_
 * _MySQL and MySQL Workbench_
 * _Git_
@@ -21,11 +20,11 @@
 * _Install .NET 5.0 [here](https://dotnet.microsoft.com/download/dotnet/5.0)_
 
 * _Clone repository from GitHub to desired location using_
-  > git clone https://github.com/curtisbrooks678/Factory.Solution.git
+  > git clone https://github.com/curtisbrooks678/Pierres_Treats
 * _In the terminal navigate to and open project directory_
-  > cd Factory.Solution
+  > cd Pierres_Treats
 * _Navigate to production folder_
-  > cd Factory
+  > cd PierresTreats
 * _Create a file in production folder called appsettings.json_
   > touch appsettings.json
 * _Add the following code to your .json file_
@@ -44,20 +43,21 @@
 
 * _Once installed, open MyMql Workbench and open a local server_
 
-* _Go to the top level of the project directory Factory, then enter the command below to initialize the database on your MySQL Workbench._
+* _Go to the top level of the project directory PierresTreats, then enter the command below to initialize the database on your MySQL Workbench._
   >dotnet ef database update
 
 ### To Run Application
 
-* _Navigate to HairSalon production folder in terminal_
-  > cd Factory
+* _Navigate to PierresTreats production folder in terminal_
+  > cd PierresTreats
 
-* _To download obj and bin files needed for the program to run, while still in Factory folder type into the terminal:_
+* _To download obj and bin files needed for the program to run, while still in PierresTreats folder type into the terminal:_
   >dotnet restore
 
-* _To run the program, while still in production folder Factory type into the terminal:_
+* _To run the program, while still in production folder PierresTreats type into the terminal:_
   >dotnet run
 #### Note: The server will not open automatically. The user will need to click on the live share link in terminal, or enter 'localhost:5000' URL into browser.
+* _To interact with the program, create a user account, then log in. There are limited password requirements for development purposes. 
 
 
 ## Known Bugs
@@ -67,3 +67,4 @@
 ## License
 
 _[MIT](https://choosealicense.com/licenses/mit/) Copyright (c) 2022 Curtis Brooks_
+
