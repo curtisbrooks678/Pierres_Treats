@@ -57,7 +57,7 @@
 * _To run the program, while still in production folder PierresTreats type into the terminal:_
   >dotnet run
 #### Note: The server will not open automatically. The user will need to click on the live share link in terminal, or enter 'localhost:5000' URL into browser.
-* _To interact with the program, create a user account, then log in. There are limited password requirements for development purposes. 
+* _To interact with the program, create a user account, then log in. There are limited password requirements for development purposes._
 
 
 ## Known Bugs
