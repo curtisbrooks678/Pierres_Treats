@@ -1,0 +1,16 @@
+@model PierresTreats.Models.Treat
+
+<h4>Add a new treat</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(m => m.Name)
+  @Html.TextBoxFor(m => m.Name)
+  
+  @Html.Label("Select flavor")
+  @Html.DropDownList("FlavorId")
+
+  <input type="submit" value="Add new treat" class="btn btn-default" />
+}
+
+<p>@Html.ActionLink("Show all treats", "Index")</p>

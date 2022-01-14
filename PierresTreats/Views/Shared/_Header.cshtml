@@ -1,0 +1,34 @@
+@using System.Security.Claims;
+
+<nav id="banner">
+  <ul id="nav-ul">
+    <li>
+      <p id="nav-logo">Pierre's Treats</p>
+    </li>
+    <li id="nav-li-2">
+      <p>@Html.ActionLink("Home", "Index", "Home")</p>
+    </li>
+    <li>  
+      <p>@Html.ActionLink("Treats", "Index", "Treats")</p>
+    </li>
+    <li> 
+      <p>@Html.ActionLink("Flavors", "Index", "Flavors")</p>
+    </li>
+    @if (User.Identity.IsAuthenticated)
+    {
+      <li>
+        <p>@Html.ActionLink("Account Details", "Details", "Account")</p>
+      </li>
+      <li>
+        <p>@Html.ActionLink("Log Off", "LogOff", "Account")</p>
+      </li>
+    }
+    else
+    {
+    <li>
+      <p>@Html.ActionLink("Log in", "Login", "Account")</p>
+    </li>
+    }
+    
+  </ul>
+</nav>
